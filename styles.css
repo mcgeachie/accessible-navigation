@@ -80,6 +80,11 @@
   flex-grow: 0;
 }
 
+.styled .slot-and-trolley-actions button {
+  height: 100%;
+  margin-left: 8px;
+}
+
 .styled .slot-actions {
   position: relative;
 }
