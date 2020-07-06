@@ -20,12 +20,6 @@ const bindToggling = (button, element) => {
   button.addEventListener("click", toggle);
 };
 
-// slot button
-bindToggling(
-  document.getElementById("view-slot"),
-  document.getElementById("slot-info")
-);
-
 // mega-menu button
 bindToggling(
   document.getElementById("mega-menu-button"),

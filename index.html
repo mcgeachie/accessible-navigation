@@ -31,20 +31,60 @@
           <input type="submit" value="Submit" />
         </form>
         <div class="slot-and-trolley-actions">
-          <a href="/book-slot" id="book-a-slot">Book a slot</a>
-          <button
-            aria-expanded="false"
-            aria-controls="slot-info"
-            aria-label="Information about your booked slot on {date}"
-            id="view-slot"
-            hidden
-          >
-            Slot details
-          </button>
-          <div id="slot-info" hidden>
-            <span>Slot time</span>
-            <span>Slot address</span>
-            <button data-test="initiate-slot-amend">Change slot</button>
+          <div class="slot-actions">
+            <a href="/book-slot" id="book-a-slot">Book a slot</a>
+            <button
+              aria-expanded="false"
+              aria-controls="slot-info"
+              aria-hidden="true"
+              aria-label="Information about your booked slot on {date}"
+              hidden
+              id="view-slot"
+              tabindex="-1"
+              type="button"
+            >
+              Fri 25th Dec, 9am
+            </button>
+            <div class="slot-details sr-only" id="slot-info">
+              <header class="no-wrap" aria-hidden="true">
+                Your delivery slot
+              </header>
+              <div>
+                <span class="sr-only">Booked for:</span>
+                <span class="no-wrap">Friday 25 December</span>
+                <span>9-10am</span>
+              </div>
+              <div class="slot-address-details">
+                <span class="no-wrap">Delivering to:</span>
+                <span class="no-wrap">Address line 1</span>
+                <span class="no-wrap">Address line 2</span>
+                <span class="no-wrap">Address town</span>
+                <span class="no-wrap">Address region</span>
+                <span class="no-wrap">Address postcode</span>
+              </div>
+              <div>
+                <span
+                  class="sr-only"
+                  htmlFor="changeSlotButton"
+                  id="slot-button-label"
+                >
+                  Delivery slot booked for Friday 25 December 9-10am. Delivering
+                  to Address line1, Address line 2, Address town, Address
+                  region, Address postcode. Change slot.
+                </span>
+                <a
+                  aria-describedby="slot-button-label"
+                  aria-label="Change slot"
+                  href="/change-slot/collection"
+                  id="changeSlotButton"
+                  onClick="{this.toggleVisibility}"
+                  onKeyDown="{this.handleKeyDown}"
+                  type="button"
+                >
+                  Change slot
+                </a>
+              </div>
+            </div>
           </div>
           <div class="trolley-actions-container">
             <a
@@ -250,5 +290,6 @@
       <button id="styles-control">Toggle styles</button>
     </div>
     <script src="./script.js" type="text/javascript"></script>
+    <script src="./scripts/slot-button.js" type="text/javascript"></script>
   </body>
 </html>

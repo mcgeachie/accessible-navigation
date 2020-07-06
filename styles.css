@@ -29,6 +29,21 @@
   margin: 0 4px;
 }
 
+.styled .no-wrap {
+  white-space: nowrap;
+}
+
+.styled .sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 .styled .main-header {
   display: flex;
   flex-direction: column;
@@ -63,6 +78,34 @@
 .styled .slot-and-trolley-actions {
   display: flex;
   flex-grow: 0;
+}
+
+.styled .slot-actions {
+  position: relative;
+}
+
+.styled .slot-details {
+  background: #fff;
+  border: 1px solid #666;
+  padding: 16px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 5;
+}
+
+.styled .slot-details header,
+.styled .slot-details > div {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.styled .slot-details header {
+  font-weight: bold;
+}
+
+.styled .slot-address-details span {
+  display: block;
 }
 
 .styled .trolley-actions-container {
