@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <link rel="stylesheet" href="./styles.css" type="text/css" media="all" />
+  </head>
+  <body class="styled">
+    <header class="main-header">
+      <div class="primary-actions">
+        <a aria-label="Company homepage" href="/">
+          <svg
+            class="logo"
+            xmlns:svg="http://www.w3.org/2000/svg"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 177.778 42"
+          >
+            <path
+              style="stroke-width: 1.52279;"
+              id="path2"
+              fill="#394149"
+              d="M 1.8326787,40.962494 H 41.06441 V 2.0746147 H 1.8326787 Z M 33.513259,17.776828 H 25.223356 V 9.5595837 h 8.289903 z M 9.382301,9.5595837 h 8.294491 V 25.260281 h 15.836467 v 8.217244 H 9.382301 Z M 66.611686,2.0746147 A 19.615867,19.44394 0 1 0 86.227553,21.518554 19.638808,19.466682 0 0 0 66.611686,2.0746147 Z m 0,31.4029103 A 12.064713,11.958971 0 1 1 78.6764,21.518554 12.083067,11.977164 0 0 1 66.611686,33.477525 Z M 156.42252,2.0746147 A 19.615867,19.44394 0 1 0 176.03687,21.518554 19.638808,19.466682 0 0 0 156.42252,2.0746147 Z m 0,31.4029103 A 12.064713,11.958971 0 1 1 168.48571,21.518554 12.083067,11.977164 0 0 1 156.42252,33.477525 Z M 111.51635,2.0746147 A 19.615867,19.44394 0 1 0 131.1322,21.518554 19.638808,19.466682 0 0 0 111.51635,2.0746147 Z m 0,31.4029103 a 12.064713,11.958971 0 1 1 11.4529,-15.700697 h -11.4529 v 7.483453 h 11.4529 a 12.083067,11.977164 0 0 1 -11.4529,8.217244 z"
+            />
+          </svg>
+        </a>
+        <form class="search-form" role="search">
+          <input
+            aria-label="search for products"
+            name="search-products"
+            placeholder="Search…"
+            type="search"
+          />
+          <input type="submit" value="Submit" />
+        </form>
+        <div class="slot-and-trolley-actions">
+          <a href="/book-slot" id="book-a-slot">Book a slot</a>
+          <button
+            aria-expanded="false"
+            aria-controls="slot-info"
+            aria-label="Information about your booked slot on {date}"
+            id="view-slot"
+            hidden
+          >
+            Slot details
+          </button>
+          <div id="slot-info" hidden>
+            <span>Slot time</span>
+            <span>Slot address</span>
+            <button data-test="initiate-slot-amend">Change slot</button>
+          </div>
+          <div class="trolley-actions-container">
+            <a
+              aria-label="You currently have 13 items totalling £13.66 in your trolley. View your trolley"
+              class="accessible-trolley"
+              href="/trolley"
+            >
+              £13.66
+            </a>
+            <button
+              aria-controls="mini-trolley"
+              aria-expanded="false"
+              aria-hidden="true"
+              aria-label="You currently have 13 items totalling £13.66 in your trolley. View the mini trolley"
+              class="trolley-button"
+              tabindex="-1"
+              id="header-trolley-btn"
+            >
+              £13.66
+            </button>
+          </div>
+        </div>
+      </div>
+      <nav class="primary-navigation" role="navigation">
+        <div class="mega-menu-container">
+          <button
+            id="mega-menu-button"
+            aria-expanded="false"
+            aria-controls="mega-menu"
+          >
+            Browse shop
+          </button>
+          <div class="mega-menu" id="mega-menu" hidden>
+            <ul class="mega-menu-navigation">
+              <li>
+                <button
+                  id="browse-category-1-button"
+                  aria-expanded="false"
+                  aria-controls="browse-category-1"
+                >
+                  Fruit & vegetables
+                </button>
+              </li>
+              <li>
+                <button
+                  id="browse-category-2-button"
+                  aria-expanded="false"
+                  aria-controls="browse-category-2"
+                >
+                  Meat, chicken & fish
+                </button>
+              </li>
+              <li>
+                <button
+                  id="browse-category-3-button"
+                  aria-expanded="false"
+                ></button>
+              </li>
+            </ul>
+            <div class="mega-menu-categories">
+              <nav id="browse-category-1" hidden>
+                <ul>
+                  <li><a href="/browse/category/11">Fresh fruit</a></li>
+                  <li><a href="/browse/category/12">Fresh vegetables</a></li>
+                  <li><a href="/browse/category/13">Fresh salad</a></li>
+                  <li><a href="/browse/category/14">Fresh herbs</a></li>
+                  <li>
+                    <a href="/browse/category/15"
+                      >In season fruit & vegetables</a
+                    >
+                  </li>
+                  <li><a href="/browse/category/16">Stir fry</a></li>
+                </ul>
+                <div>
+                  <a class="offer-category-button" href="/offers/category/1"
+                    >Fruit & vegetables OFFERS</a
+                  >
+                  <a href="/browse/category/1">View all Fruit & vegetables</a>
+                </div>
+              </nav>
+              <nav id="browse-category-2" hidden>
+                <ul>
+                  <li><a href="browse/category/21">Fresh meat</a></li>
+                  <li>
+                    <a href="browse/category/22">Fresh chicken & poultry</a>
+                  </li>
+                  <li><a href="browse/category/23">Cooked meats</a></li>
+                  <li><a href="browse/category/24">Fish</a></li>
+                  <li><a href="browse/category/25">Seafood</a></li>
+                </ul>
+                <div>
+                  <a class="offer-category-button" href="/offers/category/2"
+                    >Meat, chicken & fish OFFERS</a
+                  >
+                  <a href="/browse/category/2">View all Meat, chicken & fish</a>
+                </div>
+              </nav>
+              <nav id="browse-category-3" hidden>
+                <ul>
+                  <li><a href="browse/category/301">Deli & dips</a></li>
+                  <li>
+                    <a href="browse/category/302">
+                      Pies, quiches & savoury snacks
+                    </a>
+                  </li>
+                  <li><a href="browse/category/303">Desserts</a></li>
+                  <li><a href="browse/category/304">Ready meals</a></li>
+                  <li>
+                    <a href="browse/category/305">Pizza & garlic bread</a>
+                  </li>
+                  <li><a href="browse/category/306">Pasta & sauces</a></li>
+                  <li><a href="browse/category/307">Soups</a></li>
+                  <li>
+                    <a href="browse/category/308">Juice, smoothies & drinks</a>
+                  </li>
+                  <li><a href="browse/category/309">Easy to cook meals</a></li>
+                  <li><a href="browse/category/310">Food to go</a></li>
+                  <li><a href="browse/category/311">Party food</a></li>
+                </ul>
+                <div>
+                  <a class="offer-category-button" href="/offers/category/3"
+                    >Chilled food & desserts OFFERS</a
+                  >
+                  <a href="/browse/category/3">
+                    View all Chilled food & desserts
+                  </a>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <ul class="authored-primary-navigation">
+          <li><a href="/offers">Offers</a></li>
+          <li><a href="/browse/categories/easter">Easter</a></li>
+          <li><a href="/recipes">Recipes</a></li>
+          <li><a href="/inspiration">Inspire me</a></li>
+        </ul>
+        <div class="account-actions">
+          <ul>
+            <li><a href="/favourites">Favourites</a></li>
+            <li><a href="/my-account/myorders">My orders</a></li>
+          </ul>
+          <div class="account-action-wrapper" id="unauthenticated">
+            <button id="sign-in" aria-haspopup="true" aria-expanded="false">
+              Sign in / register
+            </button>
+            <div class="account-popup" id="sign-in-form" hidden>
+              <!-- sign-in component-->
+              <header>Sign in</header>
+              <form>
+                <label for="email" id="email-label">Email address</label>
+                <input
+                  aria-labelledby="email-label"
+                  aria-required="true"
+                  name="email"
+                  type="email"
+                  value=""
+                />
+                <label for="password" id="password-label">Password</label>
+                <input aria-labelledby="password-label"
+                aria-required="true"name="password" type="password" value=" />
+                <button type="submit">Sign in</button>
+              </form>
+              <a href="/forgotten-password">Forgotten your password?</a>
+              <div>
+                <header>Don't have an account?</header>
+                <a href="/register">Register</a>
+              </div>
+              <!-- end of sign-in component -->
+            </div>
+          </div>
+          <nav class="account-action-wrapper" id="authenticated" hidden>
+            <button
+              id="account-details"
+              aria-expanded="false"
+              aria-controls="account-actions"
+            >
+              Customer name
+            </button>
+            <ul class="account-popup" id="account-actions" hidden>
+              <li><a href="/my-account">My details</a></li>
+              <li>
+                <a href="/my-account#loyalty-card">Loyalty card</a>
+              </li>
+              <li><a href="/lists">Lists</a></li>
+              <li><a href="/sign-out">Sign out</a></li>
+            </ul>
+          </nav>
+        </div>
+      </nav>
+      <nav class="secondary-navigation">
+        <ul>
+          <li><a href="/store-finder">Find a shop</a></li>
+          <li><a href="/customer-service">Customer Service</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="mini-trolley"></div>
+    <!-- The following code is part of the page state management and should not be considered accessible -->
+    <div id="controls">
+      <button id="slot-booked-control">Book slot</button>
+      <button id="authentication-control">Sign-in</button>
+      <button id="styles-control">Toggle styles</button>
+    </div>
+    <script src="./script.js" type="text/javascript"></script>
+  </body>
+</html>
