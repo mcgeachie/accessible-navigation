@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-GB">
   <head>
-    <link rel="stylesheet" href="./styles.css" type="text/css" media="all" />
+    <link rel="preload" as="font" href="./webfonts/fa-brands-400.woff2" type="font/woff2">
+    <link rel="preload" as="font" href="./webfonts/fa-regular-400.woff2" type="font/woff2">
+    <link rel="preload" as="font" href="./webfonts/fa-solid-900.woff2" type="font/woff2">
+    <link rel="stylesheet" href="./css/fontawesome.css" type="text/css" />
+    <link rel="stylesheet" href="./css/base.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" media="all" />
   </head>
   <body class="styled">
     <header class="main-header">
@@ -32,17 +37,19 @@
         </form>
         <div class="slot-and-trolley-actions">
           <div class="slot-actions">
-            <a href="/book-slot" id="book-a-slot">Book a slot</a>
+            <a class="button" href="/book-slot" id="book-a-slot">Book a slot</a>
             <button
               aria-expanded="false"
               aria-controls="slot-info"
               aria-hidden="true"
-              aria-label="Information about your booked slot on {date}"
+              aria-label="Information about your booked slot on Friday 25th December"
+              class="button"
               hidden
               id="view-slot"
               tabindex="-1"
               type="button"
             >
+              <i class="far fa-calendar-alt"></i>
               Fri 25th Dec, 9am
             </button>
             <div class="slot-details sr-only" id="slot-info">
@@ -77,8 +84,7 @@
                   aria-label="Change slot"
                   href="/change-slot/collection"
                   id="changeSlotButton"
-                  onClick="{this.toggleVisibility}"
-                  onKeyDown="{this.handleKeyDown}"
+                  tabindex="-1"
                   type="button"
                 >
                   Change slot
@@ -88,21 +94,25 @@
           </div>
           <div class="trolley-actions-container">
             <a
-              aria-label="You currently have 13 items totalling £13.66 in your trolley. View your trolley"
-              class="accessible-trolley"
+              aria-label="Currently 13 items totalling £13.66 in your trolley. View your trolley"
+              class="sr-only accessible-trolley"
               href="/trolley"
+              id="view-trolley-link"
+              title="Currently 13 items totalling £13.66 in your trolley. View your trolley."
             >
+              <i class="fas fa-shopping-cart"></i>
+              <span class="sr-only">Total</span>
               £13.66
             </a>
             <button
-              aria-controls="mini-trolley"
-              aria-expanded="false"
               aria-hidden="true"
-              aria-label="You currently have 13 items totalling £13.66 in your trolley. View the mini trolley"
-              class="trolley-button"
+              class="button"
+              id="view-trolley"
               tabindex="-1"
-              id="header-trolley-btn"
+              type="button"
             >
+              <i class="fas fa-shopping-cart"></i>
+              <span class="sr-only">Total</span>
               £13.66
             </button>
           </div>
@@ -248,15 +258,7 @@
                 aria-required="true"name="password" type="password" value=" />
                 <button type="submit">Sign in</button>
               </form>
-              <a href="/forgotten-password">Forgotten your password?</a>
-              <div>
-                <header>Don't have an account?</header>
-                <a href="/register">Register</a>
-              </div>
-              <!-- end of sign-in component -->
-            </div>
-          </div>
-          <nav class="account-action-wrapper" id="authenticated" hidden>
+              <a href="/forgotten-password">Forgotten your pasd" hidden>
             <button
               id="account-details"
               aria-expanded="false"
@@ -291,5 +293,6 @@
     </div>
     <script src="./script.js" type="text/javascript"></script>
     <script src="./scripts/slot-button.js" type="text/javascript"></script>
+    <script src="./scripts/trolley-button.js" type="text/javascript"></script>
   </body>
 </html>

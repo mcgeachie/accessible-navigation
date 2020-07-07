@@ -52,14 +52,17 @@ bindToggling(
   slotBookingControl.addEventListener("click", () => {
     const bookASlot = document.getElementById("book-a-slot");
     const slotDetails = document.getElementById("view-slot");
+    const changeSlotButton = document.getElementById("changeSlotButton");
 
     if (bookASlot.getAttribute("hidden")) {
       bookASlot.removeAttribute("hidden");
       slotDetails.setAttribute("hidden", true);
+      changeSlotButton.setAttribute("tabindex", "-1");
       slotBookingControl.textContent = "Book slot";
     } else {
       slotDetails.removeAttribute("hidden");
       bookASlot.setAttribute("hidden", true);
+      changeSlotButton.removeAttribute("tabindex");
       slotBookingControl.textContent = "Remove slot";
     }
   }))(document.getElementById("slot-booked-control"));

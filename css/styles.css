@@ -9,41 +9,6 @@
   right: 20px;
 }
 
-.styled a {
-  font-family: sans-serif;
-  text-decoration: none;
-}
-
-.styled a:hover {
-  text-decoration: underline;
-}
-
-.styled ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.styled li {
-  display: inline-block;
-  margin: 0 4px;
-}
-
-.styled .no-wrap {
-  white-space: nowrap;
-}
-
-.styled .sr-only {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
 .styled .main-header {
   display: flex;
   flex-direction: column;
@@ -81,7 +46,6 @@
 }
 
 .styled .slot-and-trolley-actions button {
-  height: 100%;
   margin-left: 8px;
 }
 
@@ -118,30 +82,16 @@
 }
 
 .styled .accessible-trolley {
-  left: 0;
   overflow: hidden;
   position: absolute;
-  top: 0;
-  width: 0;
 }
 
-.styled .accessible-trolley:focus {
-  background: #efefef;
-  border: 1px outset #767676;
-  box-sizing: border-box;
-  color: #000;
-  font-family: Arial;
-  font-size: 13.3333px;
-  height: 21.4286px; /* naturally rendered height of the <button /> in Chrome */
-  padding: 1px 6px;
-  text-align: center;
+.styled .accessible-trolley:not([class*="sr-only"]) {
+  left: 8px;
   right: 0;
+  top: 0;
   width: auto;
   z-index: 2;
-}
-
-.trolley-button {
-  height: 21.4286px;
 }
 
 .styled .primary-navigation {

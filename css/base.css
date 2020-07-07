@@ -1,0 +1,85 @@
+.styled a {
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+.styled a:hover {
+  text-decoration: underline;
+}
+
+.styled ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.styled li {
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.styled .no-wrap {
+  white-space: nowrap;
+}
+
+.styled .sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.styled .button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  align-items: flex-start;
+  appearance: none;
+  background: #fff;
+  box-sizing: border-box;
+  color: #666;
+  cursor: pointer;
+  font: 400 16px Arial;
+  height: 40px;
+  letter-spacing: normal;
+  margin: 0;
+  opacity: 0;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0px;
+  text-rendering: auto;
+  text-shadow: none;
+  text-transform: none;
+  vertical-align: middle;
+  word-spacing: normal;
+}
+
+.styled .button:not([hidden]) {
+  border: 2px solid #666;
+  display: inline-block;
+  opacity: 1;
+  padding: 8px 16px;
+}
+
+.styled .button:link,
+.styled .button:visited {
+  color: #666;
+  text-decoration: none;
+}
+
+.styled .button:hover,
+.styled .button:active {
+  border-color: #333;
+  color: #333;
+}
+
+.styled .button:focus {
+  border-color: #333;
+  color: #333;
+  box-shadow: 0;
+  outline: 4px solid #359cd4;
+  outline-offset: 4px;
+}
