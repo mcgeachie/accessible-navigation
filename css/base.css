@@ -18,6 +18,13 @@
   margin: 0 4px;
 }
 
+.styled input[type="submit"] {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
 .styled .no-wrap {
   white-space: nowrap;
 }

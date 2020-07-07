@@ -46,15 +46,34 @@
             />
           </svg>
         </a>
-        <form class="search-form" role="search">
-          <input
-            aria-label="search for products"
-            name="search-products"
-            placeholder="Search…"
-            type="search"
-          />
-          <input type="submit" value="Submit" />
-        </form>
+        <div class="search-form">
+          <div class="search-form-wrapper">
+            <form role="search">
+              <label class="sr-only" for="search-input" id="search-input-label">Search for products</label>
+              <input
+                aria-label="search for products"
+                class="search-box-input"
+                id="search-input"
+                name="search-products"
+                placeholder="Search…"
+                type="search"
+              />
+              <input class="sr-only" type="submit" />
+              <label class="sr-only" for="search-box-submit" id="search-box-submit-label">
+                Submit
+              </label>
+              <button
+                aria-labelledby="search-box-submit-label"
+                class="search-submit"
+                id="search-box-submit"
+                tabindex="-1"
+                type="button"
+              >
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
         <div class="slot-and-trolley-actions">
           <div class="slot-actions">
             <a class="button" href="/book-slot" id="book-a-slot">Book a slot</a>
@@ -114,15 +133,14 @@
           </div>
           <div class="trolley-actions-container">
             <a
-              aria-label="Currently 13 items totalling £13.66 in your trolley. View your trolley"
               class="sr-only accessible-trolley"
               href="/trolley"
               id="view-trolley-link"
-              title="Currently 13 items totalling £13.66 in your trolley. View your trolley."
             >
               <i class="fas fa-shopping-cart"></i>
-              <span class="sr-only">Total</span>
+              <span class="sr-only">Currently 13 items totalling</span>
               £13.66
+              <span class="sr-only">in your trolley. View your trolley</span>
             </a>
             <button
               aria-hidden="true"

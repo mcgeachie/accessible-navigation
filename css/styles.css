@@ -31,13 +31,39 @@
 }
 
 .styled .logo {
-  max-width: 220px;
+  max-width: 190px;
 }
 
 .styled .search-form {
   display: flex;
   flex-grow: 1;
   justify-content: center;
+}
+
+.styled .search-form-wrapper {
+  background: #fff;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 0 8px;
+}
+
+.styled .search-box-input {
+  border: 0;
+  line-height: 36px;
+}
+
+.styled .search-box-input:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.styled .search-submit {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  border: 0;
 }
 
 .styled .slot-and-trolley-actions {
