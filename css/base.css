@@ -83,3 +83,47 @@
   outline: 4px solid #359cd4;
   outline-offset: 4px;
 }
+
+.styled .nav-item {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  color: #666;
+  cursor: pointer;
+  font: 400 16px Arial;
+  height: 40px;
+  letter-spacing: normal;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0px;
+  text-rendering: auto;
+  text-shadow: none;
+  text-transform: none;
+  word-spacing: normal;
+}
+
+.styled .nav-item:link,
+.styled .nav-item:visited {
+  color: #666;
+  text-decoration: none;
+}
+
+.styled .nav-item:hover,
+.styled .nav-item:active {
+  color: #333;
+  text-decoration: underline;
+}
+
+.styled .nav-item:focus {
+  color: #333;
+  box-shadow: 0;
+  outline: 4px solid #359cd4;
+  outline-offset: 4px;
+  text-decoration: underline;
+}

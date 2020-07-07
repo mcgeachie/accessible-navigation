@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en-GB">
   <head>
-    <link rel="preload" as="font" href="./webfonts/fa-brands-400.woff2" type="font/woff2">
-    <link rel="preload" as="font" href="./webfonts/fa-regular-400.woff2" type="font/woff2">
-    <link rel="preload" as="font" href="./webfonts/fa-solid-900.woff2" type="font/woff2">
+    <link
+      rel="preload"
+      as="font"
+      href="./webfonts/fa-brands-400.woff2"
+      type="font/woff2"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="./webfonts/fa-regular-400.woff2"
+      type="font/woff2"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="./webfonts/fa-solid-900.woff2"
+      type="font/woff2"
+    />
     <link rel="stylesheet" href="./css/fontawesome.css" type="text/css" />
     <link rel="stylesheet" href="./css/base.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="./css/styles.css" type="text/css" media="all" />
+    <link
+      rel="stylesheet"
+      href="./css/styles.css"
+      type="text/css"
+      media="all"
+    />
   </head>
   <body class="styled">
     <header class="main-header">
@@ -121,9 +141,10 @@
       <nav class="primary-navigation" role="navigation">
         <div class="mega-menu-container">
           <button
-            id="mega-menu-button"
             aria-expanded="false"
             aria-controls="mega-menu"
+            class="nav-item"
+            id="mega-menu-button"
           >
             Browse shop
           </button>
@@ -227,22 +248,34 @@
           </div>
         </div>
         <ul class="authored-primary-navigation">
-          <li><a href="/offers">Offers</a></li>
-          <li><a href="/browse/categories/easter">Easter</a></li>
-          <li><a href="/recipes">Recipes</a></li>
-          <li><a href="/inspiration">Inspire me</a></li>
+          <li><a class="nav-item" href="/offers">Offers</a></li>
+          <li>
+            <a class="nav-item" href="/browse/categories/seasonal">Seasonal</a>
+          </li>
+          <li><a class="nav-item" href="/recipes">Recipes</a></li>
+          <li><a class="nav-item" href="/inspiration">Inspiration</a></li>
         </ul>
         <div class="account-actions">
-          <ul>
-            <li><a href="/favourites">Favourites</a></li>
-            <li><a href="/my-account/myorders">My orders</a></li>
-          </ul>
           <div class="account-action-wrapper" id="unauthenticated">
-            <button id="sign-in" aria-haspopup="true" aria-expanded="false">
-              Sign in / register
-            </button>
+            <div class="sign-in-container">
+              <a
+                class="sr-only accessible-sign-in"
+                href="/sign-in"
+                id="sign-in-link"
+              >
+                Sign in / register
+              </a>
+              <button
+                aria-expanded="false"
+                aria-haspopup="true"
+                class="nav-item"
+                id="sign-in"
+                tabindex="-1"
+              >
+                Sign in / register
+              </button>
+            </div>
             <div class="account-popup" id="sign-in-form" hidden>
-              <!-- sign-in component-->
               <header>Sign in</header>
               <form>
                 <label for="email" id="email-label">Email address</label>
@@ -254,33 +287,83 @@
                   value=""
                 />
                 <label for="password" id="password-label">Password</label>
-                <input aria-labelledby="password-label"
-                aria-required="true"name="password" type="password" value=" />
-                <button type="submit">Sign in</button>
+                <input
+                  aria-labelledby="password-label"
+                  aria-required="true"
+                  name="password"
+                  type="password"
+                  value=""
+                />
+                <button class="button" type="submit">Sign in</button>
               </form>
-              <a href="/forgotten-password">Forgotten your pasd" hidden>
-            <button
-              id="account-details"
-              aria-expanded="false"
-              aria-controls="account-actions"
-            >
-              Customer name
-            </button>
-            <ul class="account-popup" id="account-actions" hidden>
-              <li><a href="/my-account">My details</a></li>
+              <a class="nav-item link" href="/forgotten-password">
+                Forgotten your password?
+              </a>
+              <div>
+                <header>Don't have an account?</header>
+                <a class="nav-item link" href="/register">Register</a>
+              </div>
+            </div>
+          </div>
+          <nav class="account-action-wrapper" id="authenticated" hidden>
+            <ul>
+              <li><a class="nav-item" href="/favourites">Favourites</a></li>
               <li>
-                <a href="/my-account#loyalty-card">Loyalty card</a>
+                <a class="nav-item" href="/my-account/myorders">My orders</a>
               </li>
-              <li><a href="/lists">Lists</a></li>
-              <li><a href="/sign-out">Sign out</a></li>
+            </ul>
+            <label
+              class="sr-only"
+              htmlFor="account-details"
+              id="account-details-label"
+            >
+              Customer name account actions
+            </label>
+            <button
+              aria-controls="account-actions"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-labelledby="account-details-label"
+              class="nav-item"
+              id="account-details"
+            >
+              Customer Name
+            </button>
+            <ul class="sr-only account-popup" id="account-actions">
+              <li>
+                <a class="nav-item" href="/my-account">
+                  <i class="fas fa-user-alt"></i>
+                  My details
+                </a>
+              </li>
+              <li>
+                <a class="nav-item" href="/my-account#loyalty-card">
+                  <i class="fas fa-credit-card"></i>
+                  Loyalty card
+                </a>
+              </li>
+              <li>
+                <a class="nav-item" href="/lists">
+                  <i class="fas fa-list"></i>
+                  Lists
+                </a>
+              </li>
+              <li>
+                <a class="nav-item" href="/sign-out">
+                  <i class="fas fa-sign-out-alt"></i>
+                  Sign out
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
       </nav>
       <nav class="secondary-navigation">
         <ul>
-          <li><a href="/store-finder">Find a shop</a></li>
-          <li><a href="/customer-service">Customer Service</a></li>
+          <li><a class="nav-item" href="/store-finder">Find a shop</a></li>
+          <li>
+            <a class="nav-item" href="/customer-service">Customer Service</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -292,6 +375,7 @@
       <button id="styles-control">Toggle styles</button>
     </div>
     <script src="./script.js" type="text/javascript"></script>
+    <script src="./scripts/account-button.js" type="text/javascript"></script>
     <script src="./scripts/slot-button.js" type="text/javascript"></script>
     <script src="./scripts/trolley-button.js" type="text/javascript"></script>
   </body>

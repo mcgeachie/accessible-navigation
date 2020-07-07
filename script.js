@@ -26,17 +26,17 @@ bindToggling(
   document.getElementById("mega-menu")
 );
 
-// sign-in button
-bindToggling(
-  document.getElementById("sign-in"),
-  document.getElementById("sign-in-form")
-);
+// // sign-in button
+// bindToggling(
+//   document.getElementById("sign-in"),
+//   document.getElementById("sign-in-form")
+// );
 
-// account details
-bindToggling(
-  document.getElementById("account-details"),
-  document.getElementById("account-actions")
-);
+// // account details
+// bindToggling(
+//   document.getElementById("account-details"),
+//   document.getElementById("account-actions")
+// );
 
 [1, 2, 3].forEach((key) => {
   const button = document.getElementById(`browse-category-${key}-button`);
@@ -75,11 +75,11 @@ bindToggling(
     if (signIn.getAttribute("hidden")) {
       signIn.removeAttribute("hidden");
       accountDetails.setAttribute("hidden", true);
-      authenticationControl.textContent = "Sign-in";
+      authenticationControl.textContent = "Sign in";
     } else {
       accountDetails.removeAttribute("hidden");
       signIn.setAttribute("hidden", true);
-      authenticationControl.textContent = "Sign-out";
+      authenticationControl.textContent = "Sign out";
     }
   }))(document.getElementById("authentication-control"));
 

@@ -175,11 +175,38 @@
   flex-grow: 1;
 }
 
+.styled .authored-primary-navigation li {
+  margin-left: 24px;
+}
+
+.styled .sign-in-container {
+  position: relative;
+}
+
+.styled .accessible-sign-in {
+  overflow: hidden;
+  position: absolute;
+}
+
+.styled .accessible-sign-in:not([class*="sr-only"]) {
+  background: #fff;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: auto;
+  z-index: 2;
+}
+
 .styled .account-actions {
   flex-grow: 0;
 }
 
-.styled .account-actions > :not([hidden]) {
+.styled .account-actions li {
+  margin-right: 24px;
+}
+
+.styled .account-action-wrapper > ul:not([hidden]),
+.styled .account-action-wrapper > button:not([hidden]) {
   display: inline-block;
 }
 
@@ -207,9 +234,22 @@
   white-space: nowrap;
 }
 
+.styled .account-popup > header,
+.styled .account-popup form input {
+  margin-bottom: 16px;
+}
+
+.styled .account-popup .link {
+  white-space: nowrap;
+}
+
 .styled .secondary-navigation {
   display: flex;
   justify-content: flex-end;
   order: 1;
   width: 100%;
+}
+
+.styled .secondary-navigation li {
+  margin-left: 12px;
 }
